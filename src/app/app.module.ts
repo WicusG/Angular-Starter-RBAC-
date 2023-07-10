@@ -15,7 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatGridListModule} from '@angular/material/grid-list';
 // used to create fake backend
-import { fakeBackendProvider } from './app-helpers/fake-backend';
+import { fakeBackendProvider } from './app-helpers/mock-authenticator';
 import { JwtInterceptor } from './app-helpers/jwt.interceptor';
 import { ErrorInterceptor } from './app-helpers/error.interceptor';
 //
