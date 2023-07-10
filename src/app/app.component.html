@@ -1,0 +1,27 @@
+<mat-toolbar>
+  <span>Your Application</span>
+  <span class="example-spaces" style="flex: 1 1 auto;"></span>
+  <div  *ngIf="user">
+    <span class="example-spaces" style="flex: 1 1 auto;"></span>
+    <!-- Add additioanl menu items here-->
+    <a class="nav-item nav-link" routerLink="/home" >Home</a>
+  <a class="nav-item nav-link" routerLink="/admin" *ngIf="isAdmin">Admin</a>
+    <span class="example-spaces" style="flex: 1 1 auto;"></span>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="profileMenu"
+      class="material-symbols-outlined"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>person</mat-icon>
+    </button>
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item (click)="logout()" routerLink="/login">Logout</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+<mat-divider></mat-divider>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
+ 
