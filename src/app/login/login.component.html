@@ -1,25 +1,41 @@
-<mat-card>
+<mat-card class="login-card" >
   <mat-card-header><mat-card-title>Login Page</mat-card-title></mat-card-header>
-
-<mat-card-content>
-  <form [formGroup]="loginForm" (click)="onSubmit()">
-    <div>
-    <mat-form-field appearance="outline">
-      <mat-label>Username</mat-label>
-      <input matInput  formControlName="userName"/>
-      <mat-error >Username <strong>required</strong></mat-error>
-    </mat-form-field>
-    <br/>
-    <mat-form-field appearance="outline">
-      <mat-label>Enter your password</mat-label>
-      <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </button>
-      <mat-error >Password <strong>required</strong></mat-error>
-    </mat-form-field>
-    </div>
-    <button mat-raised-button color="primary">Login</button>
-  </form>
-</mat-card-content>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (click)="onSubmit()">
+        <div>
+          <mat-form-field appearance="outline" class="inputField">
+            <mat-label>Username</mat-label>
+            <input matInput formControlName="userName" />
+            <mat-error>Username <strong>required</strong></mat-error>
+          </mat-form-field>
+          <br />
+          <mat-form-field appearance="outline" class="inputField">
+            <mat-label>Enter your password</mat-label>
+            <input
+              matInput
+              formControlName="password"
+              [type]="hide ? 'password' : 'text'"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+            <mat-error>Password <strong>required</strong></mat-error>
+          </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary">Login</button>
+      </form>
+    </mat-card-content>
+</mat-card>
+<mat-card class="login-card-bottom">
+  <mat-card-header><mat-card-title>Demo Users</mat-card-title></mat-card-header>
+  <mat-card-content>
+    user | user <br />
+    admin | admin
+  </mat-card-content>
 </mat-card>

@@ -13,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatGridListModule} from '@angular/material/grid-list';
 // used to create fake backend
 import { fakeBackendProvider } from './app-helpers/fake-backend';
 import { JwtInterceptor } from './app-helpers/jwt.interceptor';
@@ -40,6 +41,7 @@ import { AdminComponent } from './admin/admin.component';
     MatMenuModule,
     FormsModule,
     ReactiveFormsModule,
+    MatGridListModule,
 
     AppRoutingModule, // CLI adds AppRoutingModule to the AppModule's imports array
   ],
